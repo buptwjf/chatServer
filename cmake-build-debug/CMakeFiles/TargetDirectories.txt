@@ -1,7 +1,0 @@
-/home/project/chatServer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/project/chatServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/project/chatServer/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-/home/project/chatServer/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
-/home/project/chatServer/cmake-build-debug/src/server/CMakeFiles/ChatServer.dir
-/home/project/chatServer/cmake-build-debug/src/server/CMakeFiles/edit_cache.dir
-/home/project/chatServer/cmake-build-debug/src/server/CMakeFiles/rebuild_cache.dir
