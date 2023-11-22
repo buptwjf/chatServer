@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/project/chatServer/CMake/demo1/build",
+  "command": "/usr/bin/g++   -g -g -o CMakeFiles/main.dir/main.cpp.o -c /home/project/chatServer/CMake/demo1/main.cpp",
+  "file": "/home/project/chatServer/CMake/demo1/main.cpp"
+}
+]
