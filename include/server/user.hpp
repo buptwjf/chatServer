@@ -12,7 +12,7 @@ using namespace std;
 // 用来映射字段
 class User {
 public:
-    User(int id = -1, string name = "", string pwd = "", string state = "offline") : id(id), name(name), password(pwd),
+    explicit User(int id = -1, string name = "", string pwd = "", string state = "offline") : id(id), name(name), password(pwd),
                                                                                      state(state) {
     }
 
