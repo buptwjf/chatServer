@@ -37,6 +37,12 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time) 
             response["errmsg"] = "该账号已经登陆，请重新输入新账号";
             conn->send(response.dump());
         } else {
+            // 登录成功，记录用户的连接信息
+            {
+                lock_guard<mutex> lock(_connMutex);
+                _userConnectionMap.insert({id, conn});
+            }
+
             // 登录成功，更新用户状态信息 state offline=>online
             user.setState("online");
             _userModel.updateState(user);

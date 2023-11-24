@@ -6,6 +6,7 @@
 #include <muduo/net/TcpConnection.h>
 #include <unordered_map>
 #include <functional>
+#include <mutex>
 #include "json.hpp"
 #include "public.hpp"
 #include "userModel.hpp"
@@ -37,6 +38,11 @@ private:
     ChatService();
     // 存储消息 id 和其对应的业务处理方法
     std::unordered_map<int, MsgHandler> _msgHandlerMap;
+
+    // 存取在线用户的通信连接
+    unordered_map<int, TcpConnectionPtr> _userConnectionMap;
+    // 定义互斥锁，保证 _userConnectionMap 的线程安全
+    mutex _connMutex;
     // 数据操作类对象
     UserModel _userModel;
 };
